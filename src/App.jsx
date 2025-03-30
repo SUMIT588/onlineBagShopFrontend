@@ -1,9 +1,14 @@
-import { useState } from "react";
+import AppRoutes from "./routes";
+import Loading from "./components/loading/Loading";
+import { RecoilRoot } from "recoil";
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline text-red-500">Hello world!</h1>
-    </>
+    <RecoilRoot>
+      <Loading />
+      <AppRoutes />
+      <ToastContainer />
+    </RecoilRoot>
   );
 }
 
